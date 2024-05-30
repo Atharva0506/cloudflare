@@ -13,6 +13,15 @@
 
 export default {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-		return Response.json({userName:"Atharva Naik", -id:"1212", email:"atharvan.coder@gmail.com"});
+		console.log(request.body);
+		console.log(request.method);
+		console.log(request.headers);
+
+		if(request.method == "GET"){
+			return  Response.json({message:"Konichiwa From This Side"});
+		}
+		else{
+			return Response.json({message:"Arigatooo but you dont send the request"})
+		}
 	},
 };
