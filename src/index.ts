@@ -13,6 +13,6 @@
 
 export default {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-		return new Response('Hello World!');
+		return Response.json({userName:"Atharva Naik", -id:"1212", email:"atharvan.coder@gmail.com"});
 	},
 };
